@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        tools:context=".Dashboard">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSlider"
+        app:cardCornerRadius="6dp"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5">
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#5A5A5A"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1"
+            app:sliderStartAutoCycle="true" >
+
+        </com.smarteist.autoimageslider.SliderView>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:padding="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:text="Your upcomming appoinment"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bungee"/>
+<ScrollView
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="3.5"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@drawable/border"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+</ScrollView>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:columnCount="4"
+        android:rowCount="1">
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:textColor="@color/white"
+           android:layout_marginRight="4dp"
+           android:fontFamily="@font/bungee"
+           android:text="Nearby \n Hosptial"
+           android:backgroundTint="@color/black"/>
+
+
+        <Button
+            android:id="@+id/recordFile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:layout_marginRight="4dp"
+            android:fontFamily="@font/bungee"
+            android:text="record \n file   "
+            android:backgroundTint="@color/black"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:layout_marginRight="4dp"
+            android:fontFamily="@font/bungee"
+            android:text="News \n News  "
+            android:backgroundTint="@color/black"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/button_add_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_circle_black_24dp" />
+
+    </GridLayout>
+
+</LinearLayout>

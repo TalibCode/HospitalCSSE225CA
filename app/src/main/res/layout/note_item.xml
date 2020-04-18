@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hospital : "
+            android:textColor="@color/black"
+            android:fontFamily="@font/antic"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/doctor"/>
+
+
+        <TextView
+            android:layout_toRightOf="@+id/doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_vie_title"
+            android:text="title"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="Dep/Doctor : "
+            android:textColor="@color/black"
+            android:layout_below="@+id/text_vie_title"
+            android:fontFamily="@font/antic"/>
+
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_description"
+            android:layout_toRightOf="@+id/department"
+            android:layout_below="@+id/text_vie_title"
+            android:text="Desccription"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_priority"
+            android:layout_alignParentEnd="true"
+            android:text="10:30 AM"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
